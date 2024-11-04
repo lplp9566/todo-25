@@ -30,7 +30,7 @@ const TodoContext = createContext<ContextProps>({
 const TodoProvider: FC<TodoProviderProps> = ({ children }) => {
   const [tods, settodos] = useState<Todo[]>([]);
 
-  // שליפת todos פעם אחת מה-localStorage בתחילת טעינת הקומפוננטה
+ 
   useEffect(() => {
     const todosFromStorage = getFromLocalStorage();
     settodos(todosFromStorage);
